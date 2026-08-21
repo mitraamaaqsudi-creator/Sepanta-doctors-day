@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Dr. Sepanta 🩺</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f8fbff;
+    font-family: Arial, sans-serif;
+    color: #183b56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 430px;
+    min-height: 650px;
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 15px 50px rgba(60, 130, 180, 0.15);
+    padding: 35px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.decor {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #e8f4fc;
+    top: -70px;
+    right: -60px;
+}
+
+.decor2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #edf7fd;
+    bottom: -40px;
+    left: -30px;
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 27px;
+    margin: 10px 0 15px;
+    color: #164b70;
+    line-height: 1.7;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #78909c;
+    margin-bottom: 40px;
+}
+
+button {
+    border: none;
+    background: #5da9d6;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: #438fbe;
+}
+
+.page {
+    display: none;
+    animation: fade 0.7s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    background: #eaf5fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6d9bb5;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.quote {
+    font-size: 22px;
+    line-height: 1.8;
+    font-weight: bold;
+    color: #285d7d;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 2.1;
+    color: #455a64;
+}
+
+.next {
+    margin-top: 30px;
+}
+
+.final {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    direction: ltr;
+    color: #164b70;
+    line-height: 1.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="decor"></div>
+    <div class="decor2"></div>
+
+
+    <!-- صفحه اول -->
+    <div class="page active" id="page1">
+
+        <div class="icon">🩺</div>
+
+        <h1>
+            یه چیز کوچیک برات آماده شده، دکتر.
+        </h1>
+
+        <button onclick="nextPage(2)">
+            بازش کن →
+        </button>
+
+    </div>
+
+
+    <!-- صفحه دوم -->
+    <div class="page" id="page2">
+
+        <div class="photo-placeholder">
+            عکس سپنتا با روپوش 🩺
+        </div>
+
+        <div class="quote">
+            خب...<br>
+            پس این همه درس خوندن برای این بود؟
+        </div>
+
+        <button class="next" onclick="nextPage(3)">
+            ادامه →
+        </button>
+
+    </div>
+
+
+    <!-- صفحه سوم -->
+    <div class="page" id="page3">
+
+        <div class="photo-placeholder">
+            عکس دوتایی شما 🤍
+        </div>
+
+        <div class="text">
+
+            یادمه اولین باری که روز پزشک رو بهت تبریک گفتم،
+            تابستونی بود که تازه کنکور داده بودی؛
+            وقتی هنوز حتی دانشجوی پزشکی هم محسوب نمی‌شدی.
+
+            <br><br>
+
+            و امروز، روز پزشکه؛
+            روزی که دیگه روپوش سفید تنت کردی.
+
+            <br><br>
+
+            خیلی بهت افتخار می‌کنم؛
+            به چیزی که برای رسیدن بهش تلاش کردی،
+            به مسیری که پشت سر گذاشتی،
+            و به آدمی که توی این مسیر شدی.
+
+            <br><br>
+
+            و بیشتر از همه خوشحالم که همه‌ی این سال‌ها کنارت بودم. 🤍
+
+        </div>
+
+        <button class="next" onclick="nextPage(4)">
+            ادامه →
+        </button>
+
+    </div>
+
+
+    <!-- صفحه آخر -->
+    <div class="page" id="page4">
+
+        <div class="icon">🩺</div>
+
+        <div class="final">
+            Happy Doctor’s Day, Doctor. 🩺
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function nextPage(number) {
+
+    document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.remove('active');
+    });
+
+    document.getElementById('page' + number).classList.add('active');
+
+}
+
+</script>
+
+</body>
+</html>
